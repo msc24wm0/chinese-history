@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>北宋政治與王安石變法：學習與問答中心</title>
+  <style>
+    :root{
+      --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#38bdf8; --accent-2:#22c55e; --danger:#ef4444;
+      --border:#1f2937; --link:#93c5fd;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+    a{color:var(--link);text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+    .title{font-size:22px;font-weight:700}
+    .tagline{color:var(--muted);font-size:14px}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:transparent}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin:16px 0}
+    h2{margin:0 0 8px 0;font-size:20px}
+    .search{display:flex;gap:8px;align-items:center;margin-top:8px}
+    .search input{flex:1;padding:10px;border-radius:8px;border:1px solid var(--border);background:#0b1220;color:var(--text)}
+    .btn{padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:#0b1220;color:var(--text);cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#041019;font-weight:700}
+    .btn.danger{background:var(--danger);border:none;color:#111}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:760px){.grid-2{grid-template-columns:1fr 1fr}}
+    .accordion{border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .qa{border-top:1px solid var(--border)}
+    .qa:first-child{border-top:none}
+    .qa summary{list-style:none;cursor:pointer;padding:12px;background:#0b1220;font-weight:600}
+    .qa summary::-webkit-details-marker{display:none}
+    .qa .body{padding:12px;background:#0d1324}
+    .pill{display:inline-block;padding:2px 8px;border:1px solid var(--border);border-radius:999px;font-size:12px;margin-right:6px}
+    .kbd{display:inline-block;border:1px solid var(--border);border-radius:6px;padding:2px 6px;font-size:12px;background:#0b1220}
+    .list{margin:8px 0 0 0;padding-left:18px}
+    .list li{margin:4px 0}
+    .timeline{display:grid;gap:8px}
+    .tl-item{border-left:3px solid var(--accent);padding-left:10px}
+    .tag{display:inline-block;background:#0b1220;border:1px solid var(--border);padding:2px 6px;border-radius:6px;margin-right:6px}
+    .glossary{columns:1}
+    @media(min-width:760px){.glossary{columns:2}}
+    .glossary .term{break-inside:avoid;border:1px solid var(--border);border-radius:10px;padding:10px;margin:6px 0;background:#0b1220}
+    .quiz .q{margin:10px 0;padding:10px;border:1px solid var(--border);border-radius:10px;background:#0b1220}
+    .quiz label{display:block;margin:6px 0}
+    .quiz .result{margin-top:8px;font-weight:700}
+    footer{margin:24px 0;color:var(--muted);font-size:13px}
+    .top{position:fixed;right:16px;bottom:16px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="title">北宋政治與王安石變法：學習與問答中心</div>
+        <div class="tagline">提煉重點 · 分層問答 · 時間線 · 術語索引 · 小測驗 · 可搜尋與收合</div>
+      </div>
+      <nav aria-label="導覽">
+        <a href="#key">關鍵提要</a>
+        <a href="#qa">問答</a>
+        <a href="#timeline">時間線</a>
+        <a href="#glossary">術語索引</a>
+        <a href="#quiz">小測驗</a>
+        <a href="#feedback">回饋</a>
+      </nav>
+    </header>
+
+    <section id="key" class="card">
+      <h2>關鍵提要</h2>
+      <ul class="list">
+        <li>宋初國策：強幹弱枝、重文輕武，增強中央集權，削弱地方與軍權。</li>
+        <li>文人政治：崇儒與科舉並重，文臣掌軍政，形成「以文制武」。</li>
+        <li>北宋中期問題：冗官冗兵、財政困境、行政重疊、軍力低效。</li>
+        <li>熙寧—元豐新法（王安石變法）：富國（方田均稅、青苗、均輸、市易、免役）、育才（太學三舍、經義取士、時務策）、強兵（保甲、保馬、置將、將兵法）。</li>
+        <li>結果與影響：部分措施見效，但因施行急躁、保守派反對、人才選用不當及政令頻仍，最終被廢；然制度與思想影響深遠。</li>
+      </ul>
+      <div class="search">
+        <input id="search" type="search" placeholder="搜尋問答與術語…" aria-label="搜尋" />
+        <button class="btn" id="clearSearch">清除</button>
+      </div>
+      <div id="searchInfo" class="muted" aria-live="polite"></div>
+    </section>
+
+    <section id="qa" class="card">
+      <h2>分層問答（A-D）</h2>
+      <div class="accordion" id="qaList">
+
+        <details class="qa">
+          <summary><span class="pill">A·基礎</span> 什麼是「強幹弱枝」？為何實施？</summary>
+          <div class="body">
+            <p>「強幹弱枝」指強化中央（幹），削弱地方與各部門權力（枝），以防權力分散導致割據與軍閥專權。</p>
+            <ul class="list">
+              <li>分削相權：中書門下僅掌政務；軍事歸樞密院，財政歸三司。</li>
+              <li>設台諫：御史台與諫院聯合，負責監察與彈劾百官。</li>
+              <li>收兵權：禁軍駐京、地方留廂軍；實行更戍法，兵將常換，難以擁兵自立。</li>
+              <li>地方互制：知州與通判並置；稅賦由轉運使上送京師，加強財權集中。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">A·基礎</span> 「重文輕武」如何體現？</summary>
+          <div class="body">
+            <p>崇儒與科舉並重，廣開入仕渠道；文臣擔任軍政要職，戰時亦率兵出征，形成以文制武的格局。</p>
+            <ul class="list">
+              <li>科舉擴招、讀書風氣濃厚，書院興盛。</li>
+              <li>不殺士大夫、「不罪言官」的政治傳統。</li>
+              <li>恩蔭制度提升士族後代入仕機會。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">B·進階</span> 更戍法的具體作用與利弊？</summary>
+          <div class="body">
+            <p>作用：三年一調，兵無常帥、帥無常師，抑制軍閥化，鞏固中央集權。</p>
+            <p>利：防將領坐大；弊：兵將互不相熟，戰術協同與戰鬥力受影響。</p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">B·進階</span> 北宋中期為何出現冗官冗兵與財政困境？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>科舉擴張與行政重疊導致官員數量暴增。</li>
+              <li>邊防形勢嚴峻，長期擴兵造成軍費高企。</li>
+              <li>對遼、西夏戰爭失利，以歲幣求和，加重財政負擔。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">C·細節</span> 三司、樞密院、台諫各掌何權？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>樞密院：軍政與軍令中樞。</li>
+              <li>三司：度支、戶部、鹽鐵，負責財政與物資。</li>
+              <li>台諫：監察與言論監督，約束百官。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">C·細節</span> 王安石「富國」措施有哪些？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>方田均稅：重新丈量土地，按產量徵稅。</li>
+              <li>青苗法：青黃不接時以低息官貸助農。</li>
+              <li>均輸法：轉運司預采與就地銷售以平抑物價。</li>
+              <li>市易法：政府收購滯銷貨、缺貨時投放。</li>
+              <li>免役法：以募役或交役錢，政府雇人代役。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">C·細節</span> 「育才」與「強兵」如何落實？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>育才：經義取士、時務策；太學三舍制（外舍→內舍→上舍）。</li>
+              <li>強兵：保甲法、保馬法、置將法、將兵法（精簡編制、統兵制度與軍馬管理）。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">D·思考</span> 新法為何最終失敗？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>施行急躁，政令頻仍，一事未成又興新事。</li>
+              <li>保守派強烈反對，政治鬥爭激烈。</li>
+              <li>人才選用與執行不當，個別新人貪婪或擅權。</li>
+              <li>君臣急於求成，惠民之法變為擾民之政。</li>
+              <li>神宗崩、哲宗即位後在新舊黨爭中廢新法。</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <section id="timeline" class="card">
+      <h2>時間線（1043—1085）</h2>
+      <div class="timeline">
+        <div class="tl-item"><strong>1043</strong> 范仲淹推行慶曆新政，次年即止。</div>
+        <div class="tl-item"><strong>1068</strong> 王安石上疏力陳變法。</div>
+        <div class="tl-item"><strong>1069</strong> 神宗命王安石為參知政事，啟動變法；設制置三司條例司統籌。</div>
+        <div class="tl-item"><strong>1070</strong> 王安石升任宰相（同中書門下平章事）。</div>
+        <div class="tl-item"><strong>1074</strong> 王安石在壓力下罷相。</div>
+        <div class="tl-item"><strong>1075</strong> 復相，繼續推行新法。</div>
+        <div class="tl-item"><strong>1076</strong> 再罷；神宗仍推行部分新法。</div>
+        <div class="tl-item"><strong>1085</strong> 神宗崩，哲宗即位；司馬光主政後廢新法。</div>
+      </div>
+    </section>
+
+    <section id="glossary" class="card">
+      <h2>術語索引</h2>
+      <div class="glossary">
+        <div class="term"><strong>強幹弱枝</strong><br>強化中央、削弱地方與部門權力的總方針。</div>
+        <div class="term"><strong>重文輕武</strong><br>崇儒與科舉，文臣掌軍政，以文制武。</div>
+        <div class="term"><strong>樞密院</strong><br>掌軍政與軍令的最高機構。</div>
+        <div class="term"><strong>三司</strong><br>度支、戶部、鹽鐵，掌財政與物資調配。</div>
+        <div class="term"><strong>台諫</strong><br>御史台與諫院合稱，負責監察與言論監督。</div>
+        <div class="term"><strong>更戍法</strong><br>禁軍三年一調，兵無常帥、帥無常師。</div>
+        <div class="term"><strong>轉運使</strong><br>負責一路賦稅上送京師並監察財務。</div>
+        <div class="term"><strong>知州／通判</strong><br>地方長官與副職並置，相互牽制防專權。</div>
+        <div class="term"><strong>恩蔭</strong><br>士族後代免試任官的制度。</div>
+        <div class="term"><strong>歲幣</strong><br>對遼、西夏以錢帛求和的歲貢。</div>
+        <div class="term"><strong>方田均稅</strong><br>重新丈量土地，按產量與地力徵稅。</div>
+        <div class="term"><strong>青苗法</strong><br>季節性低息官貸，緩解農民資金壓力。</div>
+        <div class="term"><strong>均輸法／市易法</strong><br>平抑物價與籌措財政的流通調控措施。</div>
+        <div class="term"><strong>免役法</strong><br>以役錢代差役，政府雇人代役。</div>
+        <div class="term"><strong>太學三舍</strong><br>外舍→內舍→上舍，成績優者授官。</div>
+        <div class="term"><strong>保甲／保馬／置將／將兵法</strong><br>強化基層治安與軍馬、統兵與編制管理。</div>
+      </div>
+    </section>
+
+    <section id="quiz" class="card quiz">
+      <h2>小測驗</h2>
+
+      <div class="q" data-type="mc">
+        <div><strong>1.</strong> 「強幹弱枝」的核心目的是：</div>
+        <label><input type="radio" name="q1" value="A"> 加強中央集權、抑制地方與軍權坐大</label>
+        <label><input type="radio" name="q1" value="B"> 擴大科舉錄取</label>
+        <label><input type="radio" name="q1" value="C"> 發展海外貿易</label>
+        <div class="result" data-answer="A"></div>
+      </div>
+
+      <div class="q" data-type="tf">
+        <div><strong>2.</strong> 更戍法透過「兵無常帥、帥無常師」來防止將領擁兵自立。（對／錯）</div>
+        <label><input type="radio" name="q2" value="T"> 對</label>
+        <label><input type="radio" name="q2" value="F"> 錯</label>
+        <div class="result" data-answer="T"></div>
+      </div>
+
+      <div class="q" data-type="sa">
+        <div><strong>3.</strong> 說出兩項「富國」措施。</div>
+        <input type="text" placeholder="例如：方田均稅、青苗法…" />
+        <div class="result" data-answer="方田均稅;青苗法;均輸法;市易法;免役法"></div>
+      </div>
+
+      <div class="q" data-type="mc">
+        <div><strong>4.</strong> 下列哪項不屬於「育才」措施：</div>
+        <label><input type="radio" name="q4" value="A"> 太學三舍制</label>
+        <label><input type="radio" name="q4" value="B"> 經義取士與時務策</label>
+        <label><input type="radio" name="q4" value="C"> 保甲法</label>
+        <div class="result" data-answer="C"></div>
+      </div>
+
+      <div class="q" data-type="tf">
+        <div><strong>5.</strong> 「重文輕武」意味著文臣不再參與軍事決策。（對／錯）</div>
+        <label><input type="radio" name="q5" value="T"> 對</label>
+        <label><input以下為繁體中文版本的單檔網站程式碼。請全部複製到 index.html，存檔後直接以瀏覽器開啟即可使用（可離線運作，無外部依賴）。
+
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>北宋政治與王安石變法：學習與問答中心</title>
+  <style>
+    :root{
+      --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#38bdf8; --accent-2:#22c55e; --danger:#ef4444;
+      --border:#1f2937; --link:#93c5fd;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+    a{color:var(--link);text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+    .title{font-size:22px;font-weight:700}
+    .tagline{color:var(--muted);font-size:14px}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:transparent}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin:16px 0}
+    h2{margin:0 0 8px 0;font-size:20px}
+    .search{display:flex;gap:8px;align-items:center;margin-top:8px}
+    .search input{flex:1;padding:10px;border-radius:8px;border:1px solid var(--border);background:#0b1220;color:var(--text)}
+    .btn{padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:#0b1220;color:var(--text);cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#041019;font-weight:700}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:760px){.grid-2{grid-template-columns:1fr 1fr}}
+    .accordion{border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .qa{border-top:1px solid var(--border)}
+    .qa:first-child{border-top:none}
+    .qa summary{list-style:none;cursor:pointer;padding:12px;background:#0b1220;font-weight:600}
+    .qa summary::-webkit-details-marker{display:none}
+    .qa .body{padding:12px;background:#0d1324}
+    .pill{display:inline-block;padding:2px 8px;border:1px solid var(--border);border-radius:999px;font-size:12px;margin-right:6px}
+    .kbd{display:inline-block;border:1px solid var(--border);border-radius:6px;padding:2px 6px;font-size:12px;background:#0b1220}
+    .list{margin:8px 0 0 0;padding-left:18px}
+    .list li{margin:4px 0}
+    .timeline{display:grid;gap:8px}
+    .tl-item{border-left:3px solid var(--accent);padding-left:10px}
+    .glossary{columns:1}
+    @media(min-width:760px){.glossary{columns:2}}
+    .glossary .term{break-inside:avoid;border:1px solid var(--border);border-radius:10px;padding:10px;margin:6px 0;background:#0b1220}
+    .quiz .q{margin:10px 0;padding:10px;border:1px solid var(--border);border-radius:10px;background:#0b1220}
+    .quiz label{display:block;margin:6px 0}
+    .quiz .result{margin-top:8px;font-weight:700}
+    footer{margin:24px 0;color:var(--muted);font-size:13px}
+    .top{position:fixed;right:16px;bottom:16px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="title">北宋政治與王安石變法：學習與問答中心</div>
+        <div class="tagline">提煉重點 · 分層問答 · 時間線 · 術語索引 · 小測驗 · 可搜尋與收合</div>
+      </div>
+      <nav aria-label="導覽">
+        <a href="#key">關鍵提要</a>
+        <a href="#qa">問答</a>
+        <a href="#timeline">時間線</a>
+        <a href="#glossary">術語索引</a>
+        <a href="#quiz">小測驗</a>
+        <a href="#feedback">回饋</a>
+      </nav>
+    </header>
+
+    <section id="key" class="card">
+      <h2>關鍵提要</h2>
+      <ul class="list">
+        <li>宋初國策：強幹弱枝、重文輕武，增強中央集權，削弱地方與軍權。</li>
+        <li>文人政治：崇儒與科舉並重，文臣掌軍政，形成「以文制武」。</li>
+        <li>北宋中期問題：冗官冗兵、財政困境、行政重疊、軍力低效。</li>
+        <li>熙寧—元豐新法（王安石變法）：富國（方田均稅、青苗、均輸、市易、免役）、育才（太學三舍、經義取士、時務策）、強兵（保甲、保馬、置將、將兵法）。</li>
+        <li>結果與影響：部分措施見效，但因施行急躁、保守派反對、人才選用不當及政令頻仍，最終被廢；然制度與思想影響深遠。</li>
+      </ul>
+      <div class="search">
+        <input id="search" type="search" placeholder="搜尋問答與術語…" aria-label="搜尋" />
+        <button class="btn" id="clearSearch">清除</button>
+      </div>
+      <div id="searchInfo" class="muted" aria-live="polite"></div>
+    </section>
+
+    <section id="qa" class="card">
+      <h2>分層問答（A-D）</h2>
+      <div class="accordion" id="qaList">
+
+        <details class="qa">
+          <summary><span class="pill">A·基礎</span> 什麼是「強幹弱枝」？為何實施？</summary>
+          <div class="body">
+            <p>「強幹弱枝」指強化中央（幹），削弱地方與各部門權力（枝），以防權力分散導致割據與軍閥專權。</p>
+            <ul class="list">
+              <li>分削相權：中書門下僅掌政務；軍事歸樞密院，財政歸三司。</li>
+              <li>設台諫：御史台與諫院聯合，負責監察與彈劾百官。</li>
+              <li>收兵權：禁軍駐京、地方留廂軍；實行更戍法，兵將常換，難以擁兵自立。</li>
+              <li>地方互制：知州與通判並置；稅賦由轉運使上送京師，加強財權集中。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">A·基礎</span> 「重文輕武」如何體現？</summary>
+          <div class="body">
+            <p>崇儒與科舉並重，廣開入仕渠道；文臣擔任軍政要職，戰時亦率兵出征，形成以文制武的格局。</p>
+            <ul class="list">
+              <li>科舉擴招、讀書風氣濃厚，書院興盛。</li>
+              <li>不殺士大夫、「不罪言官」的政治傳統。</li>
+              <li>恩蔭制度提升士族後代入仕機會。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">B·進階</span> 更戍法的具體作用與利弊？</summary>
+          <div class="body">
+            <p>作用：三年一調，兵無常帥、帥無常師，抑制軍閥化，鞏固中央集權。</p>
+            <p>利：防將領坐大；弊：兵將互不相熟，戰術協同與戰鬥力受影響。</p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">B·進階</span> 北宋中期為何出現冗官冗兵與財政困境？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>科舉擴張與行政重疊導致官員數量暴增。</li>
+              <li>邊防形勢嚴峻，長期擴兵造成軍費高企。</li>
+              <li>對遼、西夏戰爭失利，以歲幣求和，加重財政負擔。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">C·細節</span> 三司、樞密院、台諫各掌何權？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>樞密院：軍政與軍令中樞。</li>
+              <li>三司：度支、戶部、鹽鐵，負責財政與物資。</li>
+              <li>台諫：監察與言論監督，約束百官。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">C·細節</span> 王安石「富國」措施有哪些？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>方田均稅：重新丈量土地，按產量徵稅。</li>
+              <li>青苗法：青黃不接時以低息官貸助農。</li>
+              <li>均輸法：轉運司預采與就地銷售以平抑物價。</li>
+              <li>市易法：政府收購滯銷貨、缺貨時投放。</li>
+              <li>免役法：以役錢代差役，政府雇人代役。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">C·細節</span> 「育才」與「強兵」如何落實？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>育才：經義取士、時務策；太學三舍制（外舍→內舍→上舍）。</li>
+              <li>強兵：保甲法、保馬法、置將法、將兵法（精簡編制、統兵制度與軍馬管理）。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary><span class="pill">D·思考</span> 新法為何最終失敗？</summary>
+          <div class="body">
+            <ul class="list">
+              <li>施行急躁，政令頻仍，一事未成又興新事。</li>
+              <li>保守派強烈反對，政治鬥爭激烈。</li>
+              <li>人才選用與執行不當，個別新人貪婪或擅權。</li>
+              <li>君臣急於求成，惠民之法變為擾民之政。</li>
+              <li>神宗崩、哲宗即位後在新舊黨爭中廢新法。</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <section id="timeline" class="card">
+      <h2>時間線（1043—1085）</h2>
+      <div class="timeline">
+        <div class="tl-item"><strong>1043</strong> 范仲淹推行慶曆新政，次年即止。</div>
+        <div class="tl-item"><strong>1068</strong> 王安石上疏力陳變法。</div>
+        <div class="tl-item"><strong>1069</strong> 神宗命王安石為參知政事，啟動變法；設制置三司條例司統籌。</div>
+        <div class="tl-item"><strong>1070</strong> 王安石升任宰相（同中書門下平章事）。</div>
+        <div class="tl-item"><strong>1074</strong> 王安石在壓力下罷相。</div>
+        <div class="tl-item"><strong>1075</strong> 復相，繼續推行新法。</div>
+        <div class="tl-item"><strong>1076</strong> 再罷；神宗仍推行部分新法。</div>
+        <div class="tl-item"><strong>1085</strong> 神宗崩，哲宗即位；司馬光主政後廢新法。</div>
+      </div>
+    </section>
+
+    <section id="glossary" class="card">
+      <h2>術語索引</h2>
+      <div class="glossary">
+        <div class="term"><strong>強幹弱枝</strong><br>強化中央、削弱地方與部門權力的總方針。</div>
+        <div class="term"><strong>重文輕武</strong><br>崇儒與科舉，文臣掌軍政，以文制武。</div>
+        <div class="term"><strong>樞密院</strong><br>掌軍政與軍令的最高機構。</div>
+        <div class="term"><strong>三司</strong><br>度支、戶部、鹽鐵，掌財政與物資調配。</div>
+        <div class="term"><strong>台諫</strong><br>御史台與諫院合稱，負責監察與言論監督。</div>
+        <div class="term"><strong>更戍法</strong><br>禁軍三年一調，兵無常帥、帥無常師。</div>
+        <div class="term"><strong>轉運使</strong><br>負責一路賦稅上送京師並監察財務。</div>
+        <div class="term"><strong>知州／通判</strong><br>地方長官與副職並置，相互牽制防專權。</div>
+        <div class="term"><strong>恩蔭</strong><br>士族後代免試任官的制度。</div>
+        <div class="term"><strong>歲幣</strong><br>對遼、西夏以錢帛求和的歲貢。</div>
+        <div class="term"><strong>方田均稅</strong><br>重新丈量土地，按產量與地力徵稅。</div>
+        <div class="term"><strong>青苗法</strong><br>季節性低息官貸，緩解農民資金壓力。</div>
+        <div class="term"><strong>均輸法／市易法</strong><br>平抑物價與籌措財政的流通調控措施。</div>
+        <div class="term"><strong>免役法</strong><br>以役錢代差役，政府雇人代役。</div>
+        <div class="term"><strong>太學三舍</strong><br>外舍→內舍→上舍，成績優者授官。</div>
+        <div class="term"><strong>保甲／保馬／置將／將兵法</strong><br>強化基層治安與軍馬、統兵與編制管理。</div>
+      </div>
+    </section>
+
+    <section id="quiz" class="card quiz">
+      <h2>小測驗</h2>
+
+      <div class="q" data-type="mc">
+        <div><strong>1.</strong> 「強幹弱枝」的核心目的是：</div>
+        <label><input type="radio" name="q1" value="A"> 加強中央集權、抑制地方與軍權坐大</label>
+        <label><input type="radio" name="q1" value="B"> 擴大科舉錄取</label>
+        <label><input type="radio" name="q1" value="C"> 發展海外貿易</label>
+        <div class="result" data-answer="A"></div>
+      </div>
+
+      <div class="q" data-type="tf">
+        <div><strong>2.</strong> 更戍法透過「兵無常帥、帥無常師」來防止將領擁兵自立。（對／錯）</div>
+        <label><input type="radio" name="q2" value="T"> 對</label>
+        <label><input type="radio" name="q2" value="F"> 錯</label>
+        <div class="result" data-answer="T"></div>
+      </div>
+
+      <div class="q" data-type="sa">
+        <div><strong>3.</strong> 說出兩項「富國」措施。</div>
+        <input type="text" placeholder="例如：方田均稅、青苗法…" />
+        <div class="result" data-answer="方田均稅;青苗法;均輸法;市易法;免役法"></div>
+      </div>
+
+      <div class="q" data-type="mc">
+        <div><strong>4.</strong> 下列哪項不屬於「育才」措施：</div>
+        <label><input type="radio" name="q4" value="A"> 太學三舍制</label>
+        <label><input type="radio" name="q4" value="B"> 經義取士與時務策</label>
+        <label><input type="radio" name="q4" value="C"> 保甲法</label>
+        <div class="result" data-answer="C"></div>
+      </div>
+
+      <div class="q" data-type="tf">
+        <div><strong>5.</strong> 「重文輕武」意味著文臣不再參與軍事決策。（對／錯）</div>
+        <label><input type="radio" name="q5" value="T"> 對</label>
+        <label><input type="radio" name="q5" value="F"> 錯</label>
+        <div class="result" data-answer="F"></div>
+      </div>
+
+      <div class="q" data-type="ms">
+        <div><strong>6.</strong> 北宋財政壓力的主要來源包括（可複選）：</div>
+        <label><input type="checkbox" name="q6" value="A"> 冗官冗兵</label>
+        <label><input type="checkbox" name="q6" value="B"> 歲幣支出</label>
+        <label><input type="checkbox" name="q6" value="C"> 行政重疊</label>
+        <label><input type="checkbox" name="q6" value="D"> 海上絲綢之路壟斷</label>
+        <div class="result" data-answer="A;B;C"></div>
+      </div>
+
+      <button class="btn primary" id="checkQuiz">提交並評分</button>
+      <div id="quizScore" class="muted"></div>
+    </section>
+
+    <section id="feedback" class="card">
+      <h2>回饋</h2>
+      <form id="fbForm">
+        <div class="grid grid-2">
+          <div>
+            <label>姓名</label>
+            <input type="text" name="name" class="btn" placeholder="你的名字" />
+          </div>
+          <div>
+            <label>電子郵件</label>
+            <input type="email" name="email" class="btn" placeholder="you@example.com" />
+          </div>
+        </div>
+        <div style="margin-top:8px">
+          <label>意見或建議</label>
+          <textarea name="msg" class="btn" rows="4" placeholder="寫下你想改進的內容…"></textarea>
+        </div>
+        <div style="margin-top:8px">
+          <button class="btn">提交</button>
+          <span id="fbStatus" class="muted" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div>© 2025 學習與問答中心 · 本地純前端實作（可離線開啟）</div>
+      <div class="muted">鍵盤導覽：<span class="kbd">Tab</span> 焦點 · <span class="kbd">Enter</span> 展開／收合</div>
+    </footer>
+  </div>
+
+  <button class="btn top" id="toTop" aria-label="回到頂部">↑</button>
+
+  <script>
+    // 搜尋過濾
+    const search = document.getElementById('search');
+    const clearSearch = document.getElementById('clearSearch');
+    const searchInfo = document.getElementById('searchInfo');
+    const qaItems = Array.from(document.querySelectorAll('#qaList .qa'));
+    function applySearch(){
+      const q = (search.value||'').trim();
+      let shown = 0;
+      qaItems.forEach(d=>{
+        const text = d.textContent.toLowerCase();
+        const hit = q? text.includes(q.toLowerCase()): true;
+        d.style.display = hit? 'block':'none';
+        if(hit) shown++;
+      });
+      searchInfo.textContent = q? `共匹配到 ${shown} 項` : '';
+    }
+    search.addEventListener('input', applySearch);
+    clearSearch.addEventListener('click', ()=>{ search.value=''; applySearch(); });
+
+    // 回到頂部
+    document.getElementById('toTop').addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // 小測驗評分
+    function scoreMC(container, correct){
+      const name = container.querySelector('input[type=radio]')?.name;
+      const sel = document.querySelector(`input[name="${name}"]:checked`)?.value;
+      return sel===correct ? 1 : 0;
+    }
+    function scoreTF(container, correct){ return scoreMC(container, correct); }
+    function scoreSA(container, answers){
+      const val = container.querySelector('input[type=text]')?.value?.trim();
+      if(!val) return 0;
+      const set = new Set(answers.split(';'));
+      let hit = 0;
+      set.forEach(a=>{ if(val.includes(a)) hit++; });
+      return hit>0 ? 1 : 0;
+    }
+    function scoreMS(container, correctSet){
+      const selected = Array.from(container.querySelectorAll('input[type=checkbox]:checked')).map(i=>i.value);
+      const corr = new Set(correctSet.split(';'));
+      if(selected.length===0) return 0;
+      if(selected.length!==corr.size) return 0;
+      for(const v of selected){ if(!corr.has(v)) return 0; }
+      return 1;
+    }
+
+    document.getElementById('checkQuiz').addEventListener('click', ()=>{
+      let score=0, total=6;
+      const blocks = Array.from(document.querySelectorAll('#quiz .q'));
+      blocks.forEach(b=>{
+        const type = b.dataset.type;
+        const ans = b.querySelector('.result').dataset.answer;
+        let s=0;
+        if(type==='mc') s=scoreMC(b, ans);
+        else if(type==='tf') s=scoreTF(b, ans);
+        else if(type==='sa') s=scoreSA(b, ans);
+        else if(type==='ms') s=scoreMS(b, ans);
+        b.querySelector('.result').textContent = s? '✅ 正確' : '❌ 再試試';
+        score += s;
+      });
+      document.getElementById('quizScore').textContent = `得分：${score} / ${total}`;
+    });
+
+    // 回饋表單（前端模擬）
+    document.getElementById('fbForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      document.getElementById('fbStatus').textContent = '已收到，謝謝你的回饋！';
+      e.target.reset();
+    });
+
+    // details 元素鍵盤可達性輔助
+    document.querySelectorAll('details.qa').forEach(d=>{
+      d.addEventListener('keyup', (ev)=>{
+        if(ev.key==='Enter' || ev.key===' ') d.open = !d.open;
+      });
+      d.setAttribute('role','group');
+    });
+  </script>
+</body>
+</html>
